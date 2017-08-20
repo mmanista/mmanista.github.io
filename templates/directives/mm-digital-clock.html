@@ -5,7 +5,7 @@
 		</div>
 		<div style="width:82%; margin-left: auto; margin-right: auto; height: 2px; background-color: rgba(240, 110, 52, 1); margin-top: 3%"></div>
 		<div class="text-center" style="margin-top: 7%; margin-left: auto; margin-right: auto" ng-style="{'font-size' : sizeValue/16, 'letter-spacing' : sizeValue/150 + 'px', 'text-indent' : sizeValue/150 + 'px'}">
-			{{timer.day + ' ' + timer.month + ' ' + timer.year | uppercase}}
+			{{timer.day | uppercase}}<sup>{{timer.daySuffix | uppercase}}</sup>{{' ' + timer.month + ' ' + timer.year | uppercase}}
 		</div>
 		<div class="text-center" style="margin-top: 8%; font-weight: bold; margin-left: auto; margin-right: auto" ng-style="{'font-size' : sizeValue/12, 'letter-spacing' : sizeValue/100 + 'px', 'text-indent' : sizeValue/100 + 'px'}">
 			{{timer.dayName | uppercase}}

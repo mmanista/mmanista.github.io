@@ -1,5 +1,14 @@
-app.controller('rootController', ['$scope', function($scope) {
-	
+app.controller('rootController', ['$scope', '$location', function($scope, $location) {
+	$scope.cfg = {
+		activeTab : 'general'
+	};
+
+	console.log($location.url());
+
+	$scope.menuClass = function(page) {
+	    var current = $location.path().substring(1);
+	    return page === current ? "active-tab" : "";
+  	};
 	$scope.menus = [
 		{
 			name: "General",
@@ -10,7 +19,12 @@ app.controller('rootController', ['$scope', function($scope) {
 			name: "My components",
 			id	: 1,
 			link: "components"
-		}
+		},
+		{
+			name: "Contact",
+			id	: 2,
+			link: "contact"
+		},
 	];
 
 	$scope.author = {

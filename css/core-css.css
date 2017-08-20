@@ -1,5 +1,13 @@
 body {
 	font-family: 'Roboto';
+	/*background-color: rgba(67, 72, 73, 1);*/
+}
+.navbar {
+	height: 10%;
+	margin-bottom: 0;
+}
+ul {
+	list-style-type: none;
 }
 .main-banner {
 	width: 100%;
@@ -39,6 +47,18 @@ body {
 	bottom: 0;
 }
 
+.about-me {
+	max-width: 1040px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 40vh;
+}
+.about-me .about-me-section {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
 .widget-container {
 	position:relative; 
 	width: 100%; 
@@ -53,6 +73,9 @@ body {
 
 .main-view {
     opacity: 1;
+    position: absolute;
+    top: 52px;
+    width: 100%;
 }
 .main-view.ng-enter,
 .main-view.ng-leave {
@@ -70,10 +93,35 @@ body {
 }
 .main-view.ng-leave-active {
     opacity: 0;
-    display: none;
+    /*display: none;*/
 }
-.main-view.ng-animate-start,
-.main-view.ng-animate-active {
-  border-spacing:none;
-  -ms-zoon:auto;
+.form-checkbox {
+	vertical-align: top;
+}
+.active-tab {
+	background-color: white;
+}
+.component-category {
+	height: 30vh;
+	margin: 20px 0;
+}
+.component-category .component-content, .component-category .component-description {
+	height: 100%;
+}
+.component-category .component-description {
+	text-align: center;
+	margin-top: 7.5vh;
+}
+.component-category .component-description .component-title {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.component-category .component-description .component-config {
+	margin-top: 10px;
+}
+.component-category .component-description span {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
 }
