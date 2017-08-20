@@ -1,0 +1,15 @@
+<div class="center-block widget-container">
+	<div class="digital-clock widget-center" ng-style="{'width' : sizeValue, 'height' : sizeValue, 'background-color' : mmBackgroundPreview ? mmBackgroundPreview : 'transparent'}" style="color: white">
+		<div class="text-center" style="padding-top: 15%">
+			<span style="display:inline-block; font-weight: bold" ng-style="{'font-size' : sizeValue/4.5, 'letter-spacing' : mmShowSeconds ? sizeValue/64 : sizeValue/16 + 'px', 'text-indent' : mmShowSeconds ? sizeValue/64 : sizeValue/16 + 'px'}">{{timer.hours}}<span style="color: rgba(240, 110, 52, 1)">:</span>{{timer.mins}}<span ng-style="{'font-size' : sizeValue/9}" style="color: rgba(240, 110, 52, 1); margin-bottom: 0;" ng-show="mmShowSeconds">:<span style="color: white">{{timer.secs}}</span></span></span>
+		</div>
+		<div style="width:82%; margin-left: auto; margin-right: auto; height: 2px; background-color: rgba(240, 110, 52, 1); margin-top: 3%"></div>
+		<div class="text-center" style="margin-top: 7%; margin-left: auto; margin-right: auto" ng-style="{'font-size' : sizeValue/16, 'letter-spacing' : sizeValue/150 + 'px', 'text-indent' : sizeValue/150 + 'px'}">
+			{{timer.day + ' ' + timer.month + ' ' + timer.year | uppercase}}
+		</div>
+		<div class="text-center" style="margin-top: 8%; font-weight: bold; margin-left: auto; margin-right: auto" ng-style="{'font-size' : sizeValue/12, 'letter-spacing' : sizeValue/100 + 'px', 'text-indent' : sizeValue/100 + 'px'}">
+			{{timer.dayName | uppercase}}
+		</div>
+		
+	</div>
+</div>

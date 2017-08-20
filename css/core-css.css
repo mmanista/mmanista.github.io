@@ -1,0 +1,79 @@
+body {
+	font-family: 'Roboto';
+}
+.main-banner {
+	width: 100%;
+	height: 20vh;
+	position: relative;
+	background-color: rgba(66, 71, 74, 1);
+	font-size: 2em;
+}
+.main-banner .main-banner-name {
+	top: 10%;
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(0, 0, 0, 1);
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+.main-banner .main-banner-surname {
+	top: 10%;
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(0, 0, 0, 1);
+	font-size: 0.75em;
+}
+.main-banner .main-banner-name, .main-banner .main-banner-surname {
+	position: absolute;
+	/*float: right;*/
+	transition: font-size 0.2s ease-in-out, top 0.2s ease-in-out;
+	right: 0;
+	padding: 10px;
+
+}
+
+.main-banner .main-banner-name:hover {
+	font-size: 1.2em;
+	/*top: 0;*/
+}
+.main-banner .main-banner-surname:hover {
+	font-size: 0.9em;
+	bottom: 0;
+}
+
+.widget-container {
+	position:relative; 
+	width: 100%; 
+	height: 100%; 
+	background-color: transparent;
+}
+.widget-container .widget-center {
+	margin-left: auto; 
+	margin-right: auto; 
+	position: relative;
+}
+
+.main-view {
+    opacity: 1;
+}
+.main-view.ng-enter,
+.main-view.ng-leave {
+    -webkit-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+}
+.main-view.ng-enter {
+    opacity: 0;
+}
+.main-view.ng-enter-active {
+    opacity: 1;
+}
+.main-view.ng-leave {
+    opacity: 1;
+}
+.main-view.ng-leave-active {
+    opacity: 0;
+    display: none;
+}
+.main-view.ng-animate-start,
+.main-view.ng-animate-active {
+  border-spacing:none;
+  -ms-zoon:auto;
+}
