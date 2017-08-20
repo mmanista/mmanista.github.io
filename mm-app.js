@@ -13,3 +13,4 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 .directive('mmDigitalClock'	, 					mmDigitalClock	)
 .directive('mmResize'		, 					mmResize		)
+.directive('mmInterestsTree',					mmInterestsTree	)

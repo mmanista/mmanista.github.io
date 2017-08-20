@@ -19,13 +19,14 @@ var mmDigitalClock = function($timeout, $window) {
         	$scope.clockTick = function() {
         		$scope.date = moment().locale('en');
         		$scope.timer = {
-        				secs	: $scope.date.format('ss'),
-        				mins	: $scope.date.format('mm'),
-        				hours	: $scope.date.format('kk'),
-        				day		: $scope.date.format('Do'),
-        				dayName	: $scope.date.format('dddd'),
-        				month	: $scope.date.format('MMMM'),
-        				year	: $scope.date.format('YYYY')
+        				secs        : $scope.date.format('ss'),
+        				mins        : $scope.date.format('mm'),
+        				hours       : $scope.date.format('kk'),
+        				day         : $scope.date.format('Do').substr(0, $scope.date.format('Do').length-2),
+                        daySuffix   : $scope.date.format('Do').substr($scope.date.format('Do').length-2),
+        				dayName	    : $scope.date.format('dddd'),
+        				month       : $scope.date.format('MMMM'),
+        				year        : $scope.date.format('YYYY')
         		};
     		};
 //    		first execution
