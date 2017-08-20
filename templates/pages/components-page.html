@@ -1,0 +1,19 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-6" style="height: 300px">
+			<mm-digital-clock
+				mm-show-seconds="clockCfg.showSecs"
+				mm-background-preview="'rgba(51, 51, 50, 1)'"
+			>
+			</mm-digital-clock>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-2">
+			<div class="form-group">
+				<input type="checkbox" id="show-secs" ng-model="clockCfg.showSecs">
+				<label for="show-secs">Show seconds</label>
+			</div>
+		</div>
+	</div>
+</div>

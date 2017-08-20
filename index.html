@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/core-css.css">
+
+	<meta charset="UTF-8">
+</head>
+<body ng-app="mmApp" ng-controller="rootController" ng-cloak>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">MACIEJ MANISTA - PORTFOLIO</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li ng-repeat="menu in menus">
+						<a href="#!{{menu.link}}">{{menu.name}}</a>
+					<li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div ng-view class="main-view"></div>
+
+	<!-- JS libs -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="lib/angular.js"></script>
 	<script src="lib/ui-bootstrap-tpls-2.5.0.js"></script>
-	<script src="root-controller.js"></script>
-	<script src="controllers/root-ctrl.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<!-- <script src="lib/bootstrap-3.3.7/js/bootstrap.js"></script>
-	<link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap.css"> -->
-</head>
-<body ng-app="mmApp" ng-controller="rootCtrl">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-6">
-				<h1>Hi!</h1>
-				<p>Here it's going to be some info about how much i like my pupa.</p>
-				<p>It looks like shit atm, but its just a matter of time when it will get more pretty.</p>
-			</div>
-			<!-- <div class="col-xs-6">
-				<input type="text" ng-model="cyce">
-				{{cyce}}
-			</div> -->
-		</div>
-	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+	<script src="lib/moment-with-locales.js"></script>
+
+	<!-- Controllers, services, modules etc. -->
+	<script type="text/javascript" src="services/time-service.js"></script>
+	<script type="text/javascript" src="directives/mm-resize.js"></script>
+	<script type="text/javascript" src="directives/mm-digital-clock.js"></script>
+
+	<script type="text/javascript" src="mm-app.js"></script>
+	<script type="text/javascript" src="root-controller.js"></script>
+	<script type="text/javascript" src="controllers/components-controller.js"></script>
+	<script type="text/javascript" src="controllers/general-controller.js"></script>
+
+
 </body>
 </html>
