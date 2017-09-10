@@ -21,8 +21,13 @@ app.controller('rootController', ['$scope', '$location', function($scope, $locat
 			link: "components"
 		},
 		{
-			name: "Contact",
+			name: "Let's play!",
 			id	: 2,
+			link: "pig_game"
+		},
+		{
+			name: "Contact",
+			id	: 3,
 			link: "contact"
 		},
 	];
