@@ -30,6 +30,11 @@ app.controller('rootController', ['$scope', '$location', function($scope, $locat
 			id	: 3,
 			link: "contact"
 		},
+		{
+			name: "Barcelona",
+			id	: 4,
+			link: "barca_map"
+		},
 	];
 
 	$scope.author = {
